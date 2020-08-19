@@ -1,8 +1,13 @@
-## Welcome to GitHub Pages
+## Welcome to Ting's Personal page
 
-You can use the [editor on GitHub](https://github.com/constantlyTiTi/tingli.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+I am currently study at centennial college 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+C# projects |  Java projects | ASP.Net projects| Android projects
+---------------|--------------|--------------|----------
+[Bank Account] | [ass01] | Asp.Net
+[File Stream] |  [ass02] |
+[Interface abstract inherit] |  [ass03] |
+
 
 ### Markdown
 
