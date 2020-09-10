@@ -1,9 +1,13 @@
 ## Welcome to Ting's Personal page
 
-<em>Update On 19th Aug, 2020</em>
+<em>Update On 9 Sep, 2020</em>
 
-I am currently study Software Engineering Technology Co-op at centennial college 
+I am currently studying Software Engineering Technology Co-op at centennial college. 
 
+ 
+##Personal Project
+
+##School projects
 C# projects |  Java projects | ASP.Net projects| Android projects
 ---------------|--------------|--------------|----------
 [Bank Account] | [ass01] | Asp.Net
@@ -12,7 +16,7 @@ C# projects |  Java projects | ASP.Net projects| Android projects
 
 
 ```markdown
-
-
+JavaScript projects
+[Comp213_WebPage]
 
 ```
