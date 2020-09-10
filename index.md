@@ -18,6 +18,6 @@ C# projects |  Java projects | ASP.Net projects| Android projects
 
 ```markdown
 JavaScript projects
-[Comp213_WebPage](https://constantlytiti.github.io/Comp213_WebPage/)
+[Comp213_WebPage] (https://constantlytiti.github.io/Comp213_WebPage/)
 
 ```
