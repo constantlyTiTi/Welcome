@@ -2,13 +2,13 @@
 
 <em>Update On 9 Sep, 2020</em>
 
-I am currently studying Software Engineering Technology Co-op at centennial college. 
+I am currently studying Software Engineering Technology Co-op at centennial college. I have built knowledge in JavaScript, C#, python, HTML, Oracle Sql, CSS, Java, ASP.net., React, Android and Java spring boot. Here are some projects I have done in order to improve my skills.    
  
-##Personal Project
+### Personal Project
 
 [Nurse Patient Test Management system Server](https://github.com/constantlyTiTi/nursePatientTest_Server)
 
-##School projects
+### School projects
 
 C# projects |  Java projects | ASP.Net projects| Android projects|JavaScript projects
 ---------------|--------------|--------------|----------|--------------|
