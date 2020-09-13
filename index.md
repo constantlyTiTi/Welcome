@@ -9,15 +9,9 @@ I am currently studying Software Engineering Technology Co-op at centennial coll
 
 ##School projects
 
-C# projects |  Java projects | ASP.Net projects| Android projects
----------------|--------------|--------------|----------
-[Bank Account] | [ass01] | Asp.Net
+C# projects |  Java projects | ASP.Net projects| Android projects|JavaScript projects
+---------------|--------------|--------------|----------|--------------|
+[Bank Account] | [ass01] | Asp.Net|[Comp213_WebPage] (https://constantlytiti.github.io/Comp213_WebPage/)
 [File Stream] |  [ass02] |
 [Interface abstract inherit] |  [ass03] |
 
-
-```markdown
-JavaScript projects
-[Comp213_WebPage] (https://constantlytiti.github.io/Comp213_WebPage/)
-
-```
