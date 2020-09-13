@@ -8,7 +8,6 @@ I am currently studying Software Engineering Technology Co-op at centennial coll
 
 > Nurse Patient Test Management system
 > - [Front end](https://constantlytiti.github.io/NursePatientTest_React) is deployed on GitHub.
-
 > - [Back end](https://github.com/constantlyTiTi/nursePatientTest_Server) build by Spring boot, it is deployed on Alibaba cloud, and using h2 database.
 
 ### School projects
