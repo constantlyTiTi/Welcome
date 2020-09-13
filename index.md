@@ -7,9 +7,9 @@ I am currently studying Software Engineering Technology Co-op at centennial coll
 ### Personal Project
 
 > Nurse Patient Test Management system
-> - [front end](https://constantlytiti.github.io/NursePatientTest_React)
+> - [Front end](https://constantlytiti.github.io/NursePatientTest_React) is deployed on GitHub.
 
-> - [back end](https://github.com/constantlyTiTi/nursePatientTest_Server) build by Spring boot, it is deployed on Alibaba cloud, and using h2 database.
+> - [Back end](https://github.com/constantlyTiTi/nursePatientTest_Server) build by Spring boot, it is deployed on Alibaba cloud, and using h2 database.
 
 ### School projects
 
