@@ -8,8 +8,9 @@ I am currently studying Software Engineering Technology Co-op at centennial coll
 
 > Nurse Patient Test Management system
 > - [Front end](https://constantlytiti.github.io/NursePatientTest_React) is deployed on GitHub. 
->    - The Frontend main features are login, register, nurse profile, patient list/details/CRUD, and test list/details/CRUD. Use React router and material UI to build the pages. Use RESTfull API to get data.
-> - [Back end](https://github.com/constantlyTiTi/nursePatientTest_Server) build by Spring boot, it is deployed on Alibaba cloud, and using h2 database.
+>   - The main features are login, register, nurse profile, patient list/details/CRUD, and test list/details/CRUD. 
+>   - Use React router and material UI to build the pages. Use RESTfull API to get data.
+> - [Back end](https://github.com/constantlyTiTi/nursePatientTest_Server) build by Spring boot using RESTfull controller to expose API. It is deployed on Heroku cloud, and using h2 database.
 
 
 ### School projects
