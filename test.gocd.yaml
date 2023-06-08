@@ -1,0 +1,80 @@
+pipelines:
+  password-reset-service-release-uk:
+    group: password-reset-service
+    label_template: "1.0.${COUNT}"
+    locking: off
+    environment_variables:
+      APPLY_MIGRATIONS: true
+    materials:
+      password-reset-service:
+        git: git@github.gamesys.co.uk:PlayerServices/password-reset-service.git
+        branch: master
+        destination: password-reset-service
+      password-reset-service-build:
+        pipeline: password-reset-service-build
+        stage: build
+      password-reset-service-config:
+        pipeline: password-reset-service-config
+        stage: build
+    parameters:
+      SERVICE_WORKING_DIR: "password-reset-service"
+      INVENTORY: integration
+      DEPLOYMENT_NAME: password-reset-service
+      PROJECT_PATH: "/usr/bin/platform-ci"
+      BUILD_VERSION: "${GO_DEPENDENCY_LABEL_PASSWORD_RESET_SERVICE_BUILD}"
+      CONFIGURATION_VERSION: "${GO_DEPENDENCY_LABEL_PASSWORD_RESET_SERVICE_CONFIG}"
+      CONTROL_CENTRE_TEMPLATE_NAME: "platform-k8s-be"
+      MIGRATIONS_TYPE: "spring-migrations"
+    stages:
+      - name: deploy-to-int03
+        approval:
+          type: manual
+          authorization:
+            roles:
+              - platform
+              - excite-rs   
+        jobs:
+          - name: deploy-to-k8s
+            tasks:
+              - type: exec
+                attributes:
+                  working_directory: "#{SERVICE_WORKING_DIR}"
+                  command: bash
+                  arguments:
+                    - -c
+                    - docker system prune --all --force
+              - type: exec
+                attributes:
+                  working_directory: "#{SERVICE_WORKING_DIR}"
+                  command: bash
+                  arguments:
+                    - -c
+                    - docker run -v /var/go/.platform-vault-password.txt:#{PROJECT_PATH}/.vault_pass --rm -i gamesys-ps-private-docker-build.artifactory.gamesys.co.uk/platform-k8s-deployer:latest -i inventory playbooks/deploy-service-to-int.yml --vault-password-file /usr/bin/platform-ci/.vault_pass --extra-vars "extra_configuration_version=#{CONFIGURATION_VERSION} extra_service_version=#{BUILD_VERSION} extra_deployment_name=#{DEPLOYMENT_NAME} extra_control_centre_template_name=#{CONTROL_CENTRE_TEMPLATE_NAME}-int03 extra_apply_migrations=$APPLY_MIGRATIONS extra_migrations_type=#{MIGRATIONS_TYPE} short_domain_name=int03 extra_env_name=integration"
+            resources:
+              - openstack
+      - name: deploy-to-int08
+        approval:
+          type: manual
+          authorization:
+            roles:
+              - platform
+              - excite-rs   
+        jobs:
+          - name: deploy-to-k8s
+            tasks:
+              - type: exec
+                attributes:
+                  working_directory: "#{SERVICE_WORKING_DIR}"
+                  command: bash
+                  arguments:
+                    - -c
+                    - docker system prune --all --force
+              - type: exec
+                attributes:
+                  working_directory: "#{SERVICE_WORKING_DIR}"
+                  command: bash
+                  arguments:
+                    - -c
+                    - docker run -v /var/go/.platform-vault-password.txt:#{PROJECT_PATH}/.vault_pass --rm -i gamesys-ps-private-docker-build.artifactory.gamesys.co.uk/platform-k8s-deployer:latest -i inventory playbooks/deploy-service-to-int.yml --vault-password-file /usr/bin/platform-ci/.vault_pass --extra-vars "extra_configuration_version=#{CONFIGURATION_VERSION} extra_service_version=#{BUILD_VERSION} extra_deployment_name=#{DEPLOYMENT_NAME} extra_control_centre_template_name=#{CONTROL_CENTRE_TEMPLATE_NAME}-int08 extra_apply_migrations=$APPLY_MIGRATIONS extra_migrations_type=#{MIGRATIONS_TYPE} short_domain_name=int08 extra_env_name=integration"
+            resources:
+              - openstack
